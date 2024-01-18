@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // no 1
+        //menghitung nilai kejuruan pplg 
+    let = `Iqbaal` ;
+    let pabp = 70;  
+    let mtk = 82;
+    let dpk = 77;
+
+    let rata2 = (pabp + mtk + dpk) / 3;
+
+    if (rata2 >= 80 && rata2 <=100){
+        grade = "A";    
+    }
+    else if(rata2 >= 75 && rata2 <=80){
+        grade = "B";
+    }
+    else if(rata2 >= 65 && rata2 <= 75){
+        grade = "C";
+    }
+    else if(rata2 >=45 && rata2 <= 65){
+        grade = "D";
+    }
+    else if(rata2 >=0 && rata2 <=45){
+        grade = "E";
+    }
+    else {
+        grade = "K";
+    }
+    console.log("nilai: " + grade), console.log("hasil rata rata: " + Math.floor (rata2))
+
+        // no 2
+        const input = Number(prompt(`Masukan kode pegawai (11 digit)`))
+        const golongan = Math.floor (input % 1000000000000 / 100000000000)
+        const tanggal = Math.floor (input % 1000000000 / 1000000000 )
+        const bulan = Math.floor (input % 100000000 / 10000000)
+        const tahun = Math.floor (input % 1000000 / 100)
+        const nn = Math.floor (input % 10000)
+
+        if (golongan >=1 && golongan <= 4) {
+            let bulanName ;
+            switch (bulan) {
+                case 1: bulanName = 'JAN'; break;
+                case 2: bulanName = 'FEB'; break;
+                case 3: bulanName = 'MAR'; break;
+                case 4: bulanName = 'APR'; break;
+                case 5: bulanName = 'MEI'; break;
+                case 6: bulanName = 'JUN'; break;
+                case 7: bulanName = 'JUL'; break;
+                case 8: bulanName = 'AGU'; break;
+                case 9: bulanName = 'SEP'; break;
+                case 10: bulanName ='OKT'; break;
+                case 11: bulanName ='NOV'; break;
+                case 12: bulanName ='DES'; break;
+                default : bulanName = 'invalid';
+            } console.log (`${input} adalah seorang peagwai bergolongan ${golongan}, lahir pada tanggal ${tanggal} ${bulanName} ${tahun}, dan bernomor urut ${3}`)
+        } else {
+            console.log(`golongan tidak valid`)
+        }
+
+        //no 3 
+        //input
+        let jamm = 23 ;
+        let menitt = 59 ;
+        let detik = 58 ;
+        let hasil = detik + 1;
+
+        //proses 
+        if (hasil > 59 ) {
+            detik = 0;
+            menitt = menitt + 1;
+            if (menit > 59) {
+                menit = 0 ;
+                jam = jam + 1;
+                if (jam <23) {
+                    detik = 0;
+                    menit = 0;
+                    jam = 0;
+                }
+            }
+            console.log (`${jamm} jam ${menitt} menit ${detik} detik`)
+        } else {
+            console.log (`${jamm} jam ${menitt} menit ${hasil} hasil`)
+        }
+    </script>
+</body>
+</html>
