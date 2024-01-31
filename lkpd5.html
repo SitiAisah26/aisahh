@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //no 1. mencetak bilangan 1 s.d 50 menggunakan while atau for
+        //looping for 
+        let h = 1;
+        while (h <= 50) {
+                console.log(h);
+            h++;
+       }
+
+        //no 2. mencetak bilangan ganjil saja dari 1 s.d 50 menggunakan while atau for
+        for ( let m = 1; m <= 50; m++) {
+            if ( m % 1 == 0) {
+                console.log(`${m} bilangan ganjil`)
+            }
+        }
+
+        //no 3. mencetak bilangan genap saja dari 1 s.d 50 menggunakan while atau for
+        for ( let n = 1; n <= 50; n++) {
+            if (n % 1 == 0) {
+                console.log(`${n} bilangan genap`)
+            }
+        }
+
+        //no 4. mencetak bilangan ganjil dan genap 1 s.d 50 menggunakan while atau for
+        //looping for 
+       for (let g = 1; g <= 50; g++) {
+            if ( g % 2 == 0) {
+                console.log(`${g} bilangan genap`)
+            } else {
+                console.log(`${g} bilangan ganjil`)
+            } 
+       }
+
+        //no 5. mencetak bilangan terbesar, terkecil dan rata rata dari bilangan yg diinput sebanyak 20 bilangan menggunalan while dan for 
+        let total = 0;
+        let bilanganTerbesar = -Infinity;
+        let bilanganTerkecil = Infinity;
+        let i = 1;
+
+         while (i <= 20) {
+            let bilangan = parseInt(prompt("Masukkan bilangan ke- ", ));
+
+        if (isNaN(bilangan)) {
+            console.log("Input bukan angka. Coba lagi.");
+        } else {
+            total += bilangan;
+
+        if (bilangan > bilanganTerbesar) {
+                bilanganTerbesar = bilangan;
+            }
+        if (bilangan < bilanganTerkecil) {
+                bilanganTerkecil = bilangan;
+            } 
+            i++;
+        }
+    }
+
+    let ratarata = total / 20;
+
+    console.log("Bilangan Terbesar: ", bilanganTerbesar);
+    console.log("Bilangan Terkecil: ", bilanganTerkecil);
+    console.log("Rata-rata: ", ratarata);
+    </script>
+</body>
+</html>
